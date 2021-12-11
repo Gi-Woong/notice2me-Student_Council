@@ -1,2 +1,2 @@
 # notice2me-Student_Council
-Notice to me
+Notice to me via discord messege
