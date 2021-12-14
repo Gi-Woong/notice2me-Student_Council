@@ -96,7 +96,7 @@ def main():
   #정상적으로 필터링이 안된경우
   elif beforelen <= len(instas): 
     print("Error but pass over: recent.json과 동일한 내용의 insta 포스트가 포착되지 않았습니다. ")
-    instas = (beforeinstas[-1],)
+    instas = (beforeinstas[0],)
   
   else:
     print("Unknown Error")
@@ -105,7 +105,7 @@ def main():
   #instas가 비어있지 않아야만 파일을 새로 씀.
   if len(instas) > 0:
     with open(recent_path, "w", encoding="utf-8") as w:
-      w.write(json.dumps(instas[0]))
+      w.write(json.dumps(instas[-1]))
       w.close()
   else:
     print("Nothing was written.")
